@@ -18,6 +18,36 @@
 //   }
 // }
 
+// const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+// const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+// console.log(height+" "+width);
+// $("body").css("height","500%");
+// $("body").css("width","400%");
+
+var OSName="Unknown OS";
+if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+
+console.log('Your OS: '+OSName);
+
+if (navigator.appVersion.indexOf("Win")!=-1) {
+
+    $(".header-text").css('font-size','2rem');
+
+    $(".main-text").css('font-size','2.5rem');
+
+    $(".about-heading").css('top','155%');
+    $(".about-heading").css('left','23%');
+    $(".about-heading").css('font-size','6rem');
+
+    $("p.test").css('font-size','1.1rem');
+
+    $("test").css('bottom','230px');
+    $("h1.reveal").css('bottom','230px');
+} 
+
 window.addEventListener('scroll', reveal);
 
 function reveal(){
